@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Add Vehicle</title>
+    <link href="{% static 'css/style.css' %}"rel="stylesheet">
+</head>
+<body style="background-color: yellow;">
+-<marquee><div style="display: flex;justify-content: space-between;align-items: center;font-size:10pxpx;background-color: Yellow;">
+    <div style="font-size:30px"> TATA MOTORS MANUFACTURING </div><div></div><div><img src="{% static 'images/tata-thumb-1-660x425.jpg' %}" style="width: 10px; height: 15px;">
+</div>
+</div></marquee>
+<div align="center">
+<h2>Book Vehicle</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>
